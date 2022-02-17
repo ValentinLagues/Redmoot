@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'PermanentMarker';
+    src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
+  }
+
+header {
+    height: 15vh;
+    background-image: url("../assets/background/texture.png");
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    font-family: PermanentMarker;
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    padding: 5vh 0;
+}
+
+#contact-link {
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+#logo {
+    width: 12vw;
+    height: 12vh;
+    padding: 1vh 0;
+}

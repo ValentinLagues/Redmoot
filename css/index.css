@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
+  }
+
+/* WRAPPER */
+.wrapper {
+    margin-top: 2vh;
+    color: white;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1.7fr 4fr 1.7fr; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+    justify-content: center; 
+  }
+
+  /* SECTION HOW TO CONTACT US */
+  .contact-us {
+      padding-top: 3vh;
+    text-align: center;
+    background-color: white;
+    grid-column: 1;
+    grid-row: 1 / 2;
+  }
+  .contact-us h2 {
+    font-family: PermanentMarker;
+    color: black;
+    padding-bottom: 3%;
+  }
+  .contact-us p {
+    color: black;
+  }
+  #phone-number {
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #phone {
+    width: 3vw;
+    height: 3vh;
+  }
+  #number {
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+  }
+
+  /* SECTION CAROUSEL */
+  .carousel {
+    grid-column: 2;
+    grid-row: 1 / 2;
+  }
+
+  /* SECTION HOW TO FIND US */
+  .three {
+    background-image: url("../assets/images/localisation.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+  .four {
+    grid-column: 1;
+    grid-row: 3 / 4;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 2 / 4;
+  }
