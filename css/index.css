@@ -17,7 +17,7 @@ body {
 
 /* WRAPPER */
 .wrapper {
-    margin-top: 2vh;
+    margin: 2vh 4vw;
     color: white;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -31,19 +31,19 @@ body {
 
   /* SECTION HOW TO CONTACT US */
   .contact-us {
-      padding-top: 3vh;
+    padding: 3vh 6vw;
     text-align: center;
+    color: black;
     background-color: white;
     grid-column: 1;
     grid-row: 1 / 2;
   }
   .contact-us h2 {
     font-family: PermanentMarker;
-    color: black;
     padding-bottom: 3%;
   }
   .contact-us p {
-    color: black;
+    font-family: Roboto, sans-serif;
   }
   #phone-number {
     padding-top: 2vh;
@@ -62,27 +62,43 @@ body {
     color:transparent;
   }
 
-  /* SECTION CAROUSEL */
-  .carousel {
+  /* SECTION SLIDER */
+  .slider {
     grid-column: 2;
     grid-row: 1 / 2;
+    background-color: red;
   }
 
   /* SECTION HOW TO FIND US */
-  .three {
+  .find-us {
     background-image: url("../assets/images/localisation.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding: 20vh 6vw 0;
+    text-align: center;
     grid-column: 1;
     grid-row: 2 / 3;
+    /* filter: brightness(80%) */
   }
-  .four {
+  .find-us h2 {
+    font-family: PermanentMarker;
+  }
+  .find-us p {
+    font-family: Roboto, sans-serif;
+    z-index: 1;
+  }
+
+  /* SECTION MAP */
+  .map {
     grid-column: 1;
     grid-row: 3 / 4;
   }
-  .five {
+
+  /* SECTION FORM */
+  .form {
     grid-column: 2;
     grid-row: 2 / 4;
+    background-color: blue;
   }
