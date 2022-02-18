@@ -8,7 +8,7 @@ header {
     background-image: url("../assets/background/texture.png");
 }
 
-label, #toggle {
+.menu-burger, #toggle {
     display: none;
 }
 .menu {
@@ -59,7 +59,7 @@ nav .menu a {
     width: 50%;
 }
 
-label {
+.menu-burger {
     width: 10vw;
     display: flex;
     justify-content: center;
