@@ -17,6 +17,7 @@
     <!-- ========== HEADER ========== -->
     <header>
       <nav>
+        <!-- ========== MENU ========== -->
         <div class="header">
           <label class="menu-burger" for="toggle">☰</label>
           <input type="checkbox" id="toggle" />
@@ -108,7 +109,7 @@
         <div class="form-line">
           <label class="form-label">Choose your country *</label>
           <select id="country-select">
-            <option id="country-name"></option>
+            <!-- <option id="country-name"></option> -->
           </select>
         </div>
         <!-- nom -->
@@ -138,7 +139,7 @@
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
         cssMode: true,
@@ -153,7 +154,7 @@
         keyboard: true,
       });
     </script>
-    <script src="../node_modules/axios/dist/axios.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../node_modules/axios/dist/axios.js" defer></script>
+    <script src="../js/index.js" defer></script>
   </body>
 </html>
