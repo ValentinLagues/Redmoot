@@ -5,9 +5,6 @@
 
 body {
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
-    background-clip:text;
-    -webkit-background-clip:text;
-    color:transparent;
 }
 
 @font-face {
@@ -17,7 +14,7 @@ body {
 
 /* WRAPPER */
 .wrapper {
-    margin: 2vh 4vw;
+    margin: 2vh 0 0;
     color: white;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -87,18 +84,75 @@ body {
   }
   .find-us p {
     font-family: Roboto, sans-serif;
-    z-index: 1;
   }
 
   /* SECTION MAP */
   .map {
     grid-column: 1;
     grid-row: 3 / 4;
+    background-color: blue;
   }
 
   /* SECTION FORM */
   .form {
     grid-column: 2;
     grid-row: 2 / 4;
-    background-color: blue;
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    padding: 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .form h2 {
+    font-family: PermanentMarker;
+  }
+  .form p {
+    font-family: Roboto, sans-serif;
+  }
+  .form-line {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 5vw;
+  }
+  .form-line label {
+    font-weight: bold;
+    padding-bottom: 1vh;
+  }
+  .form-input {
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 2vh 1vw;
+  }
+  .form-button {
+    margin: 2vh 0 0;
+    background-color: white;
+    border-style: none;
+    border-radius: 10px;
+  }
+  .form-button h3 {
+    padding: 2vh 5vw;
+    font-weight: bold;
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+  }
+  #country-select {
+    color: white;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 2vh 1vw;
+  }
+
+/* ===== RESPONSIVE ===== */
+  @media screen and (max-width: 400px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
   }

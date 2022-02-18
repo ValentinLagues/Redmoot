@@ -8,6 +8,9 @@ header {
     background-image: url("../assets/background/texture.png");
 }
 
+label, #toggle {
+    display: none;
+}
 .menu {
     display: flex;
     justify-content: space-around;
@@ -32,4 +35,45 @@ header {
     width: 12vw;
     height: 12vh;
     padding: 1vh 0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 400px) {
+.header {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    height: 60px;
+}
+
+nav .menu 
+{
+    display: none;
+    flex-direction: column;
+    height: 30vh;
+}
+
+nav .menu a {
+    width: 50%;
+}
+
+label {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    padding: 3vh 0 0;
+    margin: 0 auto;
+    font-size: 5vh;
+    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    cursor: pointer;
+}
+#toggle:checked + .menu {
+    display: flex;
+    flex-direction: column;
+}
 }

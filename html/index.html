@@ -14,8 +14,8 @@
     <header>
       <nav>
         <div class="header">
-          <!-- <label for="toggle">☰</label>
-          <input type="checkbox" id="toggle" /> -->
+          <label for="toggle">☰</label>
+          <input type="checkbox" id="toggle" />
           <div class="menu">
             <a class="link" href="agency"> Agency </a>
             <a class="link" href="whoarewe"> Who are we ? </a>
@@ -45,8 +45,10 @@
           <h2 id="number">05 59 20 90 50</h2>
         </div>
       </div>
+
       <!-- SLIDER -->
       <div class="slider">Slider</div>
+
       <!-- FIND-US -->
       <div class="find-us">
         <h2>How to find us</h2>
@@ -58,10 +60,54 @@
         </p>
         <h2 id="adress">33 avenue de l'aquitaine<br />64100 bayonne</h2>
       </div>
+
       <!-- MAP -->
       <div class="map">Map</div>
+
       <!-- FORM -->
-      <div class="form">Form</div>
+      <div class="form">
+        <h2>Drop us a line</h2>
+        <p>
+          Lorem ipsum dolor sit amet. In unde adipisci et soluta facilis qui
+          nulla placeat eos reprehenderit delectus et facilis quisquam et ipsam
+          cumque et illum ipsum. Non quia dignissimos est adipisci iste ut
+          cupiditate debitis!
+        </p>
+        <!-- pays -->
+        <div class="form-line">
+          <label>Choose your country *</label>
+          <select id="country-select">
+            <option id="country-name"></option>
+          </select>
+        </div>
+        <!-- nom -->
+        <div class="form-line">
+          <label>Name *</label>
+          <input class="form-input" type="text" placeholder="John Doe" />
+        </div>
+        <!-- adresse mail -->
+        <div class="form-line">
+          <label>Mail address *</label>
+          <input
+            class="form-input"
+            type="text"
+            placeholder="johndoe@mail.com"
+          />
+        </div>
+        <!-- message -->
+        <div class="form-line">
+          <label>Message *</label>
+          <textarea class="form-input" placeholder="Drop us a line"></textarea>
+        </div>
+        <!-- bouton -->
+        <div>
+          <button class="form-button" type="button">
+            <h3>SEND</h3>
+          </button>
+        </div>
+      </div>
     </div>
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
