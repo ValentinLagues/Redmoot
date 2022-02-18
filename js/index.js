@@ -1,3 +1,4 @@
+// je fais l'appel API avec Axios
 const getCountries = async () => {
   try {
     const response = await axios.get(`https://restcountries.com/v3.1/all`);
@@ -7,11 +8,12 @@ const getCountries = async () => {
   }
 };
 
+// Je crée l'option du select avec un map
 const createOptions = (countries) => {
   const countriesList = document.getElementById("country-select");
   {
     countries.map((country) => {
-      // je créée l'option
+      // je crée l'option
       const newOption = document.createElement("option");
       newOption.text = country.name.common;
       newOption.value = country.name.common;
