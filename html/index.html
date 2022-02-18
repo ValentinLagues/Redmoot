@@ -7,6 +7,10 @@
     <!-- === Links fichiers === CSS -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Test Redmoot</title>
   </head>
   <body>
@@ -47,7 +51,16 @@
       </div>
 
       <!-- === SLIDER === -->
-      <div class="slider">Slider</div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
       <!-- === FIND-US === -->
       <div class="find-us">
@@ -107,6 +120,21 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
     <script src="../node_modules/axios/dist/axios.js"></script>
     <script src="../js/index.js"></script>
   </body>
