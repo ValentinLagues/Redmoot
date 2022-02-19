@@ -81,18 +81,6 @@ body {
     object-fit: cover;
   }
 
-  /* .swiper-button-prev {
-    padding: 0.8vw;
-    background-color: #ed1e79;
-    border-radius: 50%;
-  }
-
-  .swiper-button-next {
-    padding: 0.8vw;
-    background-color: #6d0063;
-    border-radius: 50%;
-  } */
-
   /* SECTION HOW TO FIND US */
   .find-us {
     background-image: url("../assets/images/localisation.jpg");
