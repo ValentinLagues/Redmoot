@@ -5,9 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@fancyapps/ui": "^4.0.25",
-    "axios": "^0.26.0",
-    "swiper": "^8.0.6",
-    "tippy.js": "^6.3.7"
+    "axios": "^0.26.0"
   },
   "devDependencies": {},
   "scripts": {
