@@ -4,7 +4,6 @@
   "description": "Test Tech Redmoot",
   "main": "index.js",
   "dependencies": {
-    "@fancyapps/ui": "^4.0.25",
     "axios": "^0.26.0"
   },
   "devDependencies": {},
