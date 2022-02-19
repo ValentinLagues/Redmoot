@@ -1,3 +1,5 @@
+// ========== APPEL API POUR AFFICHER LA LISTE DES PAYS ==========
+
 // je fais l'appel API avec Axios
 const getCountries = async () => {
   try {
@@ -17,6 +19,7 @@ const createOptions = (countries) => {
       const newOption = document.createElement("option");
       newOption.text = country.name.common;
       newOption.value = country.name.common;
+      newOption.style.color = "black";
       // je la rajoute au select
       countriesList.appendChild(newOption);
     });

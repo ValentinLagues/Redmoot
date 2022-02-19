@@ -91,7 +91,6 @@ body {
     text-align: center;
     grid-column: 1;
     grid-row: 2 / 3;
-    /* filter: brightness(80%) */
   }
   .find-us h2 {
     font-family: PermanentMarker;
@@ -136,19 +135,20 @@ body {
     padding-bottom: 1vh;
   }
   .form-input {
+    color: white;
     border-color: white;
     border-width: 1px;
     border-radius: 10px;
     background: transparent;
     padding: 2vh 1vw;
   }
-  .form-button {
+  #form-button {
     margin: 2vh 0 0;
     background-color: white;
-    border-style: none;
     border-radius: 10px;
+    cursor: pointer;
   }
-  .form-button h3 {
+  #form-button h3 {
     padding: 2vh 5vw;
     font-weight: bold;
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
@@ -164,6 +164,7 @@ body {
     background: transparent;
     padding: 2vh 1vw;
   }
+  
 
 /* ===== RESPONSIVE ===== */
   @media screen and (max-width: 400px) {

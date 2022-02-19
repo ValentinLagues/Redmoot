@@ -109,32 +109,43 @@
         <!-- pays -->
         <div class="form-line">
           <label class="form-label">Choose your country *</label>
-          <select id="country-select">
-            <!-- <option id="country-name"></option> -->
-          </select>
+          <select id="country-select"></select>
         </div>
         <!-- nom -->
         <div class="form-line">
           <label class="form-label">Name *</label>
-          <input class="form-input" type="text" placeholder="John Doe" />
+          <input
+            class="form-input"
+            id="form-name"
+            type="text"
+            placeholder="John Doe"
+            value=""
+          />
         </div>
         <!-- adresse mail -->
         <div class="form-line">
           <label class="form-label">Mail address *</label>
           <input
             class="form-input"
+            id="form-address"
             type="text"
             placeholder="johndoe@mail.com"
+            value=""
           />
         </div>
         <!-- message -->
         <div class="form-line">
           <label class="form-label">Message *</label>
-          <textarea class="form-input" placeholder="Drop us a line"></textarea>
+          <textarea
+            class="form-input"
+            id="form-message"
+            placeholder="Drop us a line"
+            value=""
+          ></textarea>
         </div>
         <!-- bouton -->
         <div>
-          <button class="form-button" type="button">
+          <button id="form-button" type="button">
             <h3>SEND</h3>
           </button>
         </div>
@@ -142,7 +153,9 @@
     </div>
 
     <!-- ========== SCRIPTS JAVASCRIPT ========== -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
         cssMode: true,
@@ -157,7 +170,44 @@
         keyboard: true,
       });
     </script>
+
+    <!-- AXIOS -->
     <script src="../node_modules/axios/dist/axios.js" defer></script>
-    <script src="../js/index.js" defer></script>
+    <script src="../js/axios.js" defer></script>
+
+    <!-- TIPPY -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      // Je définie les variables avec un getElementById
+      const sendButton = document.getElementById("form-button");
+      const formName = document.getElementById("form-name");
+      const formAddress = document.getElementById("form-address");
+      const formMessage = document.getElementById("form-message");
+      console.log(formAddress);
+      // Au clic sur le bouton, je renvoies des messages d'erreur ou de succes
+      sendButton.addEventListener("click", (event) => {
+        event.target.value;
+        if (formName === null) {
+          return tippy("#form-name", {
+            content: "Fill with your name",
+          });
+        } else if (formAddress === null) {
+          return tippy("#form-address", {
+            content: "Fill with your address",
+          });
+        } else if (formMessage === null) {
+          return tippy("#form-message", {
+            content: "Fill with your message",
+          });
+        } else {
+          return alert("Your message has been successfully sent");
+        }
+      });
+
+      tippy(".form-input", {
+        content: "My tooltip!",
+      });
+    </script>
   </body>
 </html>
