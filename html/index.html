@@ -13,6 +13,11 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     /> -->
     <link rel="stylesheet" href="../css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+
     <title>Test Redmoot</title>
   </head>
   <body>
@@ -186,6 +191,9 @@
       });
     </script>
 
+    <!-- ==================== FANCYBOX ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
     <!-- ==================== AXIOS ==================== -->
     <script defer src="../node_modules/axios/dist/axios.js"></script>
     <script defer src="../js/axios.js"></script>
@@ -196,43 +204,34 @@
     <script>
       // Je définie les variables avec un getElementById pour récupérer la value des input
       const sendButton = document.getElementById("form-button");
-      let formName = document.getElementById("form-name").value;
-      let formAddress = document.getElementById("form-address").value;
-      let formMessage = document.getElementById("form-message").value;
+      const formName = document.getElementById("form-name");
+      const formAddress = document.getElementById("form-address");
+      const formMessage = document.getElementById("form-message");
       // Au clic sur le bouton, je renvoies des messages d'erreur (tippy) ou de succes
       sendButton.addEventListener("click", (event) => {
         event.preventDefault();
-        if (formName === "") {
-          return (
-            (document.getElementById("form-name").style.borderColor =
-              "#ed1e79"),
+        if (!formName.value) {
+          (formName.style.borderColor = "#ed1e79"),
             tippy("#form-name", {
               content: "Fill with your name",
-            })
-          );
-        } else if (formAddress === "") {
-          return (
-            (document.getElementById("form-address").style.borderColor =
-              "#ed1e79"),
+            });
+        }
+        if (!formAddress.value) {
+          (formAddress.style.borderColor = "#ed1e79"),
             tippy("#form-address", {
               content: "Fill with your address",
-            })
-          );
-        } else if (formMessage === "") {
-          return (
-            (document.getElementById("form-message").style.borderColor =
-              "#ed1e79"),
+            });
+        }
+        if (!formMessage.value) {
+          (formMessage.style.borderColor = "#ed1e79"),
             tippy("#form-message", {
               content: "Fill with your message",
-            })
-          );
-        } else {
-          return alert("Your message has been successfully sent");
+            });
+        }
+        if (formName.value && formAddress.value && formMessage.value) {
+          alert("Your message has been successfully sent");
         }
       });
-      // tippy(".form-input", {
-      //   content: "My tooltip!",
-      // });
     </script>
   </body>
 </html>

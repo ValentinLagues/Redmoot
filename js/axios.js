@@ -10,11 +10,18 @@ const getCountries = async () => {
   }
 };
 
-// Je crée l'option du select avec un map
+// Je crée une variable qui permet de ranger les pays par ordre alphabétique
+const sortByCountryName = (a, b) => {
+  if (a.name.common < b.name.common) return -1;
+  if (a.name.common > b.name.common) return 1;
+  return 0;
+};
+
+// Je crée l'option du select avec un map et qui les range par ordre alphabétique grâve au sort
 const createOptions = (countries) => {
   const countriesList = document.getElementById("country-select");
   {
-    countries.map((country) => {
+    countries.sort(sortByCountryName).map((country) => {
       // je crée l'option
       const newOption = document.createElement("option");
       newOption.text = country.name.common;
