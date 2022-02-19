@@ -137,7 +137,7 @@ body {
   .form-input {
     color: white;
     border-color: white;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 10px;
     background: transparent;
     padding: 2vh 1vw;
@@ -159,7 +159,7 @@ body {
   #country-select {
     color: white;
     border-color: white;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 10px;
     background: transparent;
     padding: 2vh 1vw;

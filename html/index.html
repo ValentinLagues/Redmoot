@@ -172,42 +172,53 @@
     </script>
 
     <!-- AXIOS -->
-    <script src="../node_modules/axios/dist/axios.js" defer></script>
-    <script src="../js/axios.js" defer></script>
+    <script defer src="../node_modules/axios/dist/axios.js"></script>
+    <script defer src="../js/axios.js"></script>
 
     <!-- TIPPY -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer src="https://unpkg.com/tippy.js@6"></script>
     <script>
-      // Je définie les variables avec un getElementById
+      // Je définie les variables avec un getElementById pour récupérer la value des input
       const sendButton = document.getElementById("form-button");
-      const formName = document.getElementById("form-name");
-      const formAddress = document.getElementById("form-address");
-      const formMessage = document.getElementById("form-message");
-      console.log(formAddress);
-      // Au clic sur le bouton, je renvoies des messages d'erreur ou de succes
+      let formName = document.getElementById("form-name").value;
+      let formAddress = document.getElementById("form-address").value;
+      let formMessage = document.getElementById("form-message").value;
+      // Au clic sur le bouton, je renvoies des messages d'erreur (tippy) ou de succes
       sendButton.addEventListener("click", (event) => {
-        event.target.value;
-        if (formName === null) {
-          return tippy("#form-name", {
-            content: "Fill with your name",
-          });
-        } else if (formAddress === null) {
-          return tippy("#form-address", {
-            content: "Fill with your address",
-          });
-        } else if (formMessage === null) {
-          return tippy("#form-message", {
-            content: "Fill with your message",
-          });
+        event.preventDefault();
+        if (formName === "") {
+          return (
+            (document.getElementById("form-name").style.borderColor =
+              "#ed1e79"),
+            tippy("#form-name", {
+              content: "Fill with your name",
+            })
+          );
+        } else if (formAddress === "") {
+          return (
+            (document.getElementById("form-address").style.borderColor =
+              "#ed1e79"),
+            tippy("#form-address", {
+              content: "Fill with your address",
+            })
+          );
+        } else if (formMessage === "") {
+          return (
+            (document.getElementById("form-message").style.borderColor =
+              "#ed1e79"),
+            tippy("#form-message", {
+              content: "Fill with your message",
+            })
+          );
         } else {
           return alert("Your message has been successfully sent");
         }
       });
 
-      tippy(".form-input", {
-        content: "My tooltip!",
-      });
+      // tippy(".form-input", {
+      //   content: "My tooltip!",
+      // });
     </script>
   </body>
 </html>
