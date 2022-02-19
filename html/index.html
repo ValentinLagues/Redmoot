@@ -8,16 +8,11 @@
     <!-- ==================== LINKS FICHIERS CSS ==================== -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    /> -->
     <link rel="stylesheet" href="../css/swiper.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
     />
-
     <title>Test Redmoot</title>
   </head>
   <body>
@@ -193,6 +188,11 @@
 
     <!-- ==================== FANCYBOX ==================== -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind(".swiper-photo", {
+        groupAll: true,
+      });
+    </script>
 
     <!-- ==================== AXIOS ==================== -->
     <script defer src="../node_modules/axios/dist/axios.js"></script>
