@@ -27,6 +27,7 @@ const createOptions = (countries) => {
       newOption.text = country.name.common;
       newOption.value = country.name.common;
       newOption.style.color = "black";
+      newOption.id = "form-country";
       // je la rajoute au select
       countriesList.appendChild(newOption);
     });

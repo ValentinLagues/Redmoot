@@ -198,12 +198,16 @@
     <script defer src="../node_modules/axios/dist/axios.js"></script>
     <script defer src="../js/axios.js"></script>
 
+    <!-- ==================== BONUS : SWEET ALERT ==================== -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- ==================== TIPPY ==================== -->
     <script defer src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer src="https://unpkg.com/tippy.js@6"></script>
     <script>
       // Je définie les variables avec un getElementById pour récupérer la value des input
       const sendButton = document.getElementById("form-button");
+      // const formCountry = document.getElementById("form-country");
       const formName = document.getElementById("form-name");
       const formAddress = document.getElementById("form-address");
       const formMessage = document.getElementById("form-message");
@@ -229,7 +233,20 @@
             });
         }
         if (formName.value && formAddress.value && formMessage.value) {
-          alert("Your message has been successfully sent");
+          // le swal est une alerte customisée avec sweet alert (bonus)
+          swal(
+            "Thank you",
+            "Your message had been successfully sent",
+            "success"
+          );
+          const result = [];
+          result.push({
+            // country: formCountry.value,
+            name: formName.value,
+            address: formAddress.value,
+            message: formMessage.value,
+          });
+          console.log(JSON.stringify(result, null, 2));
         }
       });
     </script>
