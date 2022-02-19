@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ========== Links fichiers CSS ========== -->
+    <!-- ==================== Links fichiers CSS ==================== -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link
@@ -15,10 +15,10 @@
     <title>Test Redmoot</title>
   </head>
   <body>
-    <!-- ========== HEADER ========== -->
+    <!-- ========================= HEADER ========================= -->
     <header>
       <nav>
-        <!-- ========== MENU ========== -->
+        <!-- ==================== MENU ==================== -->
         <div class="header">
           <label class="menu-burger" for="toggle">☰</label>
           <input type="checkbox" id="toggle" />
@@ -35,9 +35,9 @@
       </nav>
     </header>
 
-    <!-- ========== BODY ========== -->
+    <!-- ========================= BODY ========================= -->
     <div class="wrapper">
-      <!-- ======== CONTACT-US ======== -->
+      <!-- ==================== CONTACT-US ==================== -->
       <div class="contact-us">
         <h2>How to contact us</h2>
         <p>
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <!-- ======== SLIDER ======== -->
+      <!-- ==================== SLIDER ==================== -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -82,7 +82,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
-      <!-- ======== FIND-US ======== -->
+      <!-- ==================== FIND-US ==================== -->
       <div class="find-us">
         <h2>How to find us</h2>
         <p>
@@ -94,10 +94,10 @@
         <h2 id="adress">33 avenue de l'aquitaine<br />64100 bayonne</h2>
       </div>
 
-      <!-- ======== MAP ========= -->
+      <!-- ==================== MAP ==================== -->
       <div class="map">Map</div>
 
-      <!-- ======== FORM ======== -->
+      <!-- ==================== FORM ==================== -->
       <div class="form">
         <h2>Drop us a line</h2>
         <p>
@@ -106,12 +106,14 @@
           cumque et illum ipsum. Non quia dignissimos est adipisci iste ut
           cupiditate debitis!
         </p>
-        <!-- pays -->
+
+        <!-- ===== pays ===== -->
         <div class="form-line">
           <label class="form-label">Choose your country *</label>
           <select id="country-select"></select>
         </div>
-        <!-- nom -->
+
+        <!-- ===== nom ===== -->
         <div class="form-line">
           <label class="form-label">Name *</label>
           <input
@@ -122,7 +124,8 @@
             value=""
           />
         </div>
-        <!-- adresse mail -->
+
+        <!-- ===== adresse mail ===== -->
         <div class="form-line">
           <label class="form-label">Mail address *</label>
           <input
@@ -133,7 +136,8 @@
             value=""
           />
         </div>
-        <!-- message -->
+
+        <!-- ===== message ===== -->
         <div class="form-line">
           <label class="form-label">Message *</label>
           <textarea
@@ -143,7 +147,8 @@
             value=""
           ></textarea>
         </div>
-        <!-- bouton -->
+
+        <!-- ===== bouton ===== -->
         <div>
           <button id="form-button" type="button">
             <h3>SEND</h3>
@@ -152,9 +157,9 @@
       </div>
     </div>
 
-    <!-- ========== SCRIPTS JAVASCRIPT ========== -->
+    <!-- ========================= SCRIPTS JAVASCRIPT ========================= -->
 
-    <!-- SWIPER -->
+    <!-- ==================== SWIPER ==================== -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
@@ -171,11 +176,11 @@
       });
     </script>
 
-    <!-- AXIOS -->
+    <!-- ==================== AXIOS ==================== -->
     <script defer src="../node_modules/axios/dist/axios.js"></script>
     <script defer src="../js/axios.js"></script>
 
-    <!-- TIPPY -->
+    <!-- ==================== TIPPY ==================== -->
     <script defer src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer src="https://unpkg.com/tippy.js@6"></script>
     <script>
