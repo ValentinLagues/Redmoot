@@ -56,13 +56,21 @@ header {
     display: none;
   }
   
+/* ********** RESPONSIVE ********** */
+
   @media screen and (max-width: 400px) {
-/* cache le menu desktop sur l'interface mobile */
+  /* ***** RESPONSIVE MENU ***** */
+  /* cache le menu desktop sur l'interface mobile */
+    #root {
+      position: relative;
+      overflow-x: hidden;
+    }
+
     #topnav_menu {
       display: none;
     }
   
-/* logo à gauche et menu burger à droite */
+  /* logo à gauche et menu burger à droite */
     #home-logo {
       display: block;
       position: relative;
@@ -125,8 +133,8 @@ header {
       position: fixed;
     }
   
-    /* ***** HAMBURGER ICON ***** */
-    /* position et taille du menu burger */
+  /* ***** HAMBURGER ICON ***** */
+  /* position et taille du menu burger */
     #topnav_hamburger_icon {
       display: block;
       position: relative;
@@ -141,7 +149,7 @@ header {
       cursor: pointer;
     }
   
-    /* style des span qui forment les traits du menu burger */
+  /* style des span qui forment les traits du menu burger */
     #topnav_hamburger_icon span {
       display: block;
       position: absolute;
@@ -167,7 +175,7 @@ header {
       transition: 0.25s ease-in-out;
     }
   
-    /* position des trois traits pour former le menu burger */
+  /* position des trois traits pour former le menu burger */
     #topnav_hamburger_icon span:nth-child(1) {
       top: 0px;
       -webkit-transform-origin: left top;
@@ -190,12 +198,12 @@ header {
       transform-origin: left bottom;
     }
   
-    /* change la couleur du menu burger */
+  /* change la couleur du menu burger */
     #topnav_hamburger_icon.open span {
         background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     }
   
-    /* le premier span tourne à 45° pour former la croix */
+  /* le premier span tourne à 45° pour former la croix */
     #topnav_hamburger_icon.open span:nth-child(1) {
       width: 110%;
       -webkit-transform: rotate(45deg);
@@ -210,7 +218,7 @@ header {
       opacity: 0;
     }
   
-    /* le troisieme span tourne à -45° pour former la croix */
+  /* le troisieme span tourne à -45° pour former la croix */
     #topnav_hamburger_icon.open span:nth-child(3) {
       width: 110%;
       -webkit-transform: rotate(-45deg);
