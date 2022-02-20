@@ -5,6 +5,7 @@
 
 header {
     height: 15vh;
+    width:auto;
     background-image: url("../assets/background/texture.png");
 }
 
@@ -24,7 +25,7 @@ header {
     padding: 5vh 0;
 }
 
-#contact-link {
+.menu a:hover {
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     background-clip:text;
     -webkit-background-clip:text;
@@ -45,19 +46,15 @@ header {
 
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 400px) {
-.header {
-    display: flex;
-    flex-direction: column;
-}
 nav {
-    height: 60px;
+    height: 5vh;
 }
 
 nav .menu 
 {
     display: none;
     flex-direction: column;
-    height: 30vh;
+    height: 10vh;
 }
 
 nav .menu a {
@@ -67,7 +64,7 @@ nav .menu a {
 .menu-burger {
     width: 10vw;
     display: flex;
-    justify-content: center;
+    align-items: right;
     padding: 3vh 0 0;
     margin: 0 auto;
     font-size: 5vh;
@@ -80,5 +77,7 @@ nav .menu a {
 #toggle:checked + .menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 }

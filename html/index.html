@@ -32,7 +32,7 @@
             </a>
             <a class="link" href="coming-soon.html"> Team </a>
             <a class="link" href="coming-soon.html"> Localisation </a>
-            <a id="contact-link" href="coming-soon.html"> Contact </a>
+            <a class="link" href="coming-soon.html"> Contact </a>
           </div>
         </div>
       </nav>
@@ -193,6 +193,14 @@
     <script>
       Fancybox.bind(".swiper-photo", {
         groupAll: true,
+        Image: {
+          Panzoom: {
+            zoomFriction: 0.7,
+            maxScale: function () {
+              return 1.5;
+            },
+          },
+        },
       });
     </script>
 

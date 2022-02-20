@@ -5,6 +5,7 @@
 
 body {
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
+    width: auto;
 }
 
 @font-face {
@@ -19,22 +20,23 @@ body {
     display: grid; 
     grid-template-columns: (2, 1fr); 
     grid-template-rows: (3, 1fr); 
-    grid-template-areas: 
+    /* grid-template-areas: 
       ". ."
       ". ."
-      ". ."; 
+      ". .";  */
     justify-content: center; 
   }
 
   /* SECTION HOW TO CONTACT US */
   .contact-us {
-    padding: 3vh 6vw;
+    padding: 10vh 6vw;
     text-align: center;
     color: black;
     background-color: white;
     grid-column: 1;
     grid-row: 1 / 2;
     width: 36vw;
+    height: auto;
   }
   .contact-us h2 {
     font-family: PermanentMarker;
@@ -64,8 +66,8 @@ body {
   .slider {
     grid-column: 2;
     grid-row: 1 / 2;
-    background-color: red;
-    width: 30vw;
+    width: auto;
+    height: auto;
   }
   .swiper {
     grid-column: 2;
@@ -79,6 +81,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: zoom-in;
   }
 
   /* SECTION HOW TO FIND US */
@@ -92,6 +95,7 @@ body {
     text-align: center;
     grid-column: 1;
     grid-row: 2 / 3;
+    height: auto;
   }
   .find-us h2 {
     font-family: PermanentMarker;
@@ -104,7 +108,7 @@ body {
   .map {
     grid-column: 1;
     grid-row: 3 / 4;
-    background-color: blue;
+    height: auto;
   }
 
   /* SECTION FORM */
@@ -169,11 +173,6 @@ body {
 
 /* ===== RESPONSIVE ===== */
   @media screen and (max-width: 400px) {
-* {
-margin: 0;
-padding: 0;
-}
-
     .wrapper {
       display: flex;
       flex-direction: column;
