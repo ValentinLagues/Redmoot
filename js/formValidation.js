@@ -1,10 +1,12 @@
+// ========== CONDITIONS DE VALIDATION DU FORMULAIRE ==========
+
 // Je définie les variables avec un getElementById pour récupérer la value des input
 const sendButton = document.getElementById("form-button");
 // const formCountry = document.getElementById("form-country");
 const formName = document.getElementById("form-name");
 const formAddress = document.getElementById("form-address");
 const formMessage = document.getElementById("form-message");
-// Au clic sur le bouton, je renvoies des messages d'erreur (tippy) ou de succes
+// Au clic sur le bouton, je renvoies des messages d'erreur (tippy) ou de succes (sweet-alert)
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
   if (!formName.value) {

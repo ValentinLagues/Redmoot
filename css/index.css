@@ -13,21 +13,17 @@ body {
     src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
 }
 
-/* WRAPPER */
+/* ========== WRAPPER ========== */
 .wrapper {
     margin: 2vh 0 0;
     color: white;
     display: grid; 
     grid-template-columns: (2, 1fr); 
     grid-template-rows: (3, 1fr); 
-    /* grid-template-areas: 
-      ". ."
-      ". ."
-      ". .";  */
     justify-content: center; 
   }
 
-  /* SECTION HOW TO CONTACT US */
+  /* ========== SECTION HOW TO CONTACT US ========== */
   .contact-us {
     padding: 10vh 6vw;
     text-align: center;
@@ -63,7 +59,7 @@ body {
     color:transparent;
   }
 
-  /* SECTION SLIDER */
+  /* ========== SECTION SLIDER ========== */
   .slider {
     grid-column: 2;
     grid-row: 1 / 2;
@@ -85,7 +81,7 @@ body {
     cursor: zoom-in;
   }
 
-  /* SECTION HOW TO FIND US */
+  /* ========== SECTION HOW TO FIND US ========== */
   .find-us {
     background-image: url("../assets/images/localisation.jpg");
     background-size: cover;
@@ -105,14 +101,14 @@ body {
     font-family: Roboto, sans-serif;
   }
 
-  /* SECTION MAP */
+  /* ========== SECTION MAP ========== */
   .map {
     grid-column: 1;
     grid-row: 3 / 4;
     height: auto;
   }
 
-  /* SECTION FORM */
+  /* ========== SECTION FORM ========== */
   .form {
     color: white;
     grid-column: 2;
@@ -171,17 +167,18 @@ body {
     padding: 2vh 1vw;
   }
 
-  /* ===== RESPONSIVE ===== */
+
+/* ==================== RESPONSIVE ==================== */
+
 @media screen and (max-width: 400px) {
-
-
+  /* ========== WRAPPER RESPONSIVE ========== */
   .wrapper {
     display: flex;
     flex-direction: column;
     width: auto;
   }
 
-  /* SECTION HOW TO CONTACT US */
+  /* ========== SECTION HOW TO CONTACT US RESPONSIVE ========== */
   .contact-us {
     width: auto;
   }
@@ -192,6 +189,7 @@ body {
     height: 5vh;
   }
 
+  /* ========== SECTION HOW TO FIND US RESPONSIVE ========== */
   .find-us {
     padding: 10vh 6vw;
   }

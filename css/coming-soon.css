@@ -8,6 +8,7 @@
     src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
 }
 
+/* ========== SECTION COMING SOON ========== */
 .coming-soon {
     height: 85vh;
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
