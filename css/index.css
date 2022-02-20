@@ -10,7 +10,7 @@ body {
 @font-face {
     font-family: 'PermanentMarker';
     src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
-  }
+}
 
 /* WRAPPER */
 .wrapper {
@@ -169,6 +169,11 @@ body {
 
 /* ===== RESPONSIVE ===== */
   @media screen and (max-width: 400px) {
+* {
+margin: 0;
+padding: 0;
+}
+
     .wrapper {
       display: flex;
       flex-direction: column;

@@ -24,13 +24,15 @@
           <label class="menu-burger" for="toggle">☰</label>
           <input type="checkbox" id="toggle" />
           <div class="menu">
-            <a class="link" href="agency"> Agency </a>
-            <a class="link" href="whoarewe"> Who are we ? </a>
-            <a class="link" href="work"> Work </a>
-            <img id="logo" src="../assets/logos/logo.svg" alt="logo" />
-            <a class="link" href="team"> Team </a>
-            <a class="link" href="localisation"> Localisation </a>
-            <a id="contact-link" href="contact"> Contact </a>
+            <a class="link" href="coming-soon.html"> Agency </a>
+            <a class="link" href="coming-soon.html"> Who are we ? </a>
+            <a class="link" href="coming-soon.html"> Work </a>
+            <a href="index.html" id="logo-link">
+              <img id="logo" src="../assets/logos/logo.svg" alt="logo" />
+            </a>
+            <a class="link" href="coming-soon.html"> Team </a>
+            <a class="link" href="coming-soon.html"> Localisation </a>
+            <a id="contact-link" href="coming-soon.html"> Contact </a>
           </div>
         </div>
       </nav>
@@ -195,8 +197,9 @@
     </script>
 
     <!-- ==================== AXIOS ==================== -->
-    <script defer src="../node_modules/axios/dist/axios.js"></script>
-    <script defer src="../js/axios.js"></script>
+    <!-- <script defer src="../node_modules/axios/dist/axios.js"></script> -->
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="../js/formCountries.js"></script>
 
     <!-- ==================== BONUS : SWEET ALERT ==================== -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -204,51 +207,6 @@
     <!-- ==================== TIPPY ==================== -->
     <script defer src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer src="https://unpkg.com/tippy.js@6"></script>
-    <script>
-      // Je définie les variables avec un getElementById pour récupérer la value des input
-      const sendButton = document.getElementById("form-button");
-      // const formCountry = document.getElementById("form-country");
-      const formName = document.getElementById("form-name");
-      const formAddress = document.getElementById("form-address");
-      const formMessage = document.getElementById("form-message");
-      // Au clic sur le bouton, je renvoies des messages d'erreur (tippy) ou de succes
-      sendButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (!formName.value) {
-          (formName.style.borderColor = "#ed1e79"),
-            tippy("#form-name", {
-              content: "Fill with your name",
-            });
-        }
-        if (!formAddress.value) {
-          (formAddress.style.borderColor = "#ed1e79"),
-            tippy("#form-address", {
-              content: "Fill with your address",
-            });
-        }
-        if (!formMessage.value) {
-          (formMessage.style.borderColor = "#ed1e79"),
-            tippy("#form-message", {
-              content: "Fill with your message",
-            });
-        }
-        if (formName.value && formAddress.value && formMessage.value) {
-          // le swal est une alerte customisée avec sweet alert (bonus)
-          swal(
-            "Thank you",
-            "Your message had been successfully sent",
-            "success"
-          );
-          const result = [];
-          result.push({
-            // country: formCountry.value,
-            name: formName.value,
-            address: formAddress.value,
-            message: formMessage.value,
-          });
-          console.log(JSON.stringify(result, null, 2));
-        }
-      });
-    </script>
+    <script defer src="../js/formValidation.js"></script>
   </body>
 </html>
