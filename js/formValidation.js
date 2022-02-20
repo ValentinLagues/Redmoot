@@ -33,6 +33,7 @@ sendButton.addEventListener("click", (event) => {
     const result = [];
     result.push({
       // country: formCountry.value,
+      // country: document.getElementById("form-country").value,
       name: formName.value,
       address: formAddress.value,
       message: formMessage.value,
