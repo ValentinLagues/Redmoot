@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ********** LINKS FICHIERS CSS ********** -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/coming-soon.css" />
     <title>Coming soon</title>
   </head>
   <body>
-    <!-- ========================= HEADER ========================= -->
+    <!-- ********** HEADER ********** -->
     <header>
       <div id="root">
-        <div id="menu" class="menu">
+        <div class="menu">
           <a id="home_link" class="topnav_link" href="index.html">
             <img id="home-logo" src="../assets/logos/logo.svg" alt="logo" />
           </a>
 
-          <!-- Classic Menu -->
+          <!-- ***** Menu desktop ***** -->
           <nav role="navigation" id="topnav_menu">
             <a class="link" href="coming-soon.html"> Agency </a>
             <a class="link" href="coming-soon.html"> Who are we ? </a>
@@ -30,18 +32,18 @@
             <a class="link" href="coming-soon.html"> Contact </a>
           </nav>
 
+          <!-- ***** Création du bouton Menu burger responsive ***** -->
           <a
             id="topnav_hamburger_icon"
             href="javascript:void(0);"
             onclick="showResponsiveMenu()"
           >
-            <!-- Some spans to act as a hamburger -->
             <span></span>
             <span></span>
             <span></span>
           </a>
 
-          <!-- Responsive Menu -->
+          <!-- ***** Menu responsive ***** -->
           <nav role="navigation" id="topnav_responsive_menu">
             <ul>
               <li><a class="link" href="coming-soon.html"> Agency </a></li>
@@ -63,6 +65,9 @@
       <h1>Coming soon</h1>
     </div>
 
+    <!-- ********** SCRIPTS JAVASCRIPT ********** -->
+
+    <!-- ***** RESPONSIVE MENU : affichage du menu responsive ***** -->
     <script>
       function showResponsiveMenu() {
         var menu = document.getElementById("topnav_responsive_menu");

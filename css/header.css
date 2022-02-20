@@ -1,47 +1,55 @@
+/* ***** FONT ***** */
 @font-face {
     font-family: 'PermanentMarker';
     src: local('PermanentMarker'), url('../assets/fonts/PermanentMarker-Regular.ttf');
   }
 
+/* ***** GENERAL ***** */
 header {
     height: 15vh;
     background-image: url("../assets/background/texture.png");
 }
  
-/* ******************** NAV BAR ******************** */
+/* ***** MENU ***** */
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
+
 #topnav_menu {
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
+
 .link {
     font-family: PermanentMarker;
     color: black;
+    font-size: 3vh;
     padding: 12px;
     text-decoration: none;
 }
+
 .link:hover {
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     background-clip:text;
     -webkit-background-clip:text;
     color:transparent;
 }
+
 #logo-link {
     padding: 1vh 0;
 }
+
 #logo {
     width: 12vw;
     height: 12vh;
     cursor: pointer;
 }
   
-  /* hide responsive menu */
+/* cache le menu burger et le logo sur l'interface desktop */
   #topnav_hamburger_icon,
   #topnav_responsive_menu,
   #home-link {
@@ -49,29 +57,21 @@ header {
   }
   
   @media screen and (max-width: 400px) {
-    /* hide classic menu */
-
-    .menu {
-        width: 100vw;
-    }
+/* cache le menu desktop sur l'interface mobile */
     #topnav_menu {
-      width: 100vw;
       display: none;
     }
   
-    /* position home link at left and hamburger at right */
-
+/* logo à gauche et menu burger à droite */
     #home-logo {
-        width: 18vw;
-        height: 18vh;
+      display: block;
+      position: relative;
+      margin: 0 20px 50px;
+      width: 15vw;
+      height: 15vh;
     }
   
-    /* disable horizontal scrolling  */
-    #root {
-      position: relative;
-      overflow-x: hidden;
-    }
-    /* show responsive menu and position at the right of the screen */
+  /* affiche le menu responsive et le positionne à droite */
     #topnav_responsive_menu {
       display: block;
       position: absolute;
@@ -100,7 +100,7 @@ header {
   
       min-width: 50vw;
       height: 35vh;
-      padding: 80px 0 0;
+      padding: 100px 0 0;
   
       text-align: center;
   
@@ -116,17 +116,17 @@ header {
     #topnav_responsive_menu a {
       white-space: nowrap;
       color: black;
+      font-size: 2vh;
       text-decoration: none;
     }
   
-    /* And let's slide it in from the right */
     #topnav_responsive_menu.open {
       transform: none;
       position: fixed;
     }
   
-    /* ******************** HAMBURGER ICON ******************** */
-    /* define size and position of the hamburger link */
+    /* ***** HAMBURGER ICON ***** */
+    /* position et taille du menu burger */
     #topnav_hamburger_icon {
       display: block;
       position: relative;
@@ -141,7 +141,7 @@ header {
       cursor: pointer;
     }
   
-    /* define the style (size, color, position, animation, ...) of the 3 spans */
+    /* style des span qui forment les traits du menu burger */
     #topnav_hamburger_icon span {
       display: block;
       position: absolute;
@@ -167,7 +167,7 @@ header {
       transition: 0.25s ease-in-out;
     }
   
-    /* set the 3 spans position to look like a hamburger */
+    /* position des trois traits pour former le menu burger */
     #topnav_hamburger_icon span:nth-child(1) {
       top: 0px;
       -webkit-transform-origin: left top;
@@ -190,12 +190,12 @@ header {
       transform-origin: left bottom;
     }
   
-    /* change color when opening the menu */
+    /* change la couleur du menu burger */
     #topnav_hamburger_icon.open span {
         background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     }
   
-    /* the first span rotates 45° \ */
+    /* le premier span tourne à 45° pour former la croix */
     #topnav_hamburger_icon.open span:nth-child(1) {
       width: 110%;
       -webkit-transform: rotate(45deg);
@@ -204,13 +204,13 @@ header {
       transform: rotate(45deg);
     }
   
-    /* the second span disappears */
+    /* le second span disparait */
     #topnav_hamburger_icon.open span:nth-child(2) {
       width: 0%;
       opacity: 0;
     }
   
-    /* the last span rotates -45° / */
+    /* le troisieme span tourne à -45° pour former la croix */
     #topnav_hamburger_icon.open span:nth-child(3) {
       width: 110%;
       -webkit-transform: rotate(-45deg);
@@ -219,99 +219,3 @@ header {
       transform: rotate(-45deg);
     }
   }
-
-/* nav .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
- 
-nav .link {
-    z-index: 1;
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    text-decoration: none;
-    font-family: PermanentMarker;
-    font-size: 2.5vh;
-    color: black;
-}
- 
-nav .link:hover {
-    background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
-    background-clip:text;
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.menu-burger, #toggle {
-    display: none;
-}
-
-#logo-link {
-    padding: 1vh 0;
-}
-
-#logo {
-    width: 12vw;
-    height: 12vh;
-    cursor: pointer;
-}
-
-
-
-@media screen and (max-width: 400px)
-{
-    nav {
-        height: 15vh;
-    }
- 
-    nav .menu {
-        display: none;
-        flex-direction: column;
-        padding: 0 0 0 50vw;
-        height: 20vh;
-        text-align: end;
-    }
- 
-    nav .link {
-        width: 80%;
-        background-color: white;
-    }
-
-    nav .link:hover {
-        background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
-        background-clip:text;
-        -webkit-background-clip:text;
-        color:transparent;
-    }
-
-    .menu-burger {
-        z-index: 1;
-        width: 30px;
-        display: flex;
-        padding: 4vh 0 0 80vw;
-        font-size: 40px;
-        color: black;
-    }
-
-    #toggle:checked + .menu {
-        z-index: 1;
-        display: flex;
-        padding: 2vh 0 0 30vw;
-    }
-
-    #logo-link {
-        display: none;
-    }
-
-    #logo-link-responsive {
-        z-index: 0;
-        display: flex;
-        width: 12vw;
-        height: 12vh;
-        padding: 0 0 50vh 0;
-    }
-} */

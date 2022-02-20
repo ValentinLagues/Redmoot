@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ==================== LINKS FICHIERS CSS ==================== -->
+    <!-- ********** LINKS FICHIERS CSS ********** -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/swiper.css" />
@@ -17,7 +17,7 @@
     <title>Test Redmoot</title>
   </head>
   <body>
-    <!-- ========================= HEADER ========================= -->
+    <!-- ********** HEADER ********** -->
     <header>
       <div id="root">
         <div class="menu">
@@ -25,7 +25,7 @@
             <img id="home-logo" src="../assets/logos/logo.svg" alt="logo" />
           </a>
 
-          <!-- Classic Menu -->
+          <!-- ***** Menu desktop ***** -->
           <nav role="navigation" id="topnav_menu">
             <a class="link" href="coming-soon.html"> Agency </a>
             <a class="link" href="coming-soon.html"> Who are we ? </a>
@@ -38,18 +38,18 @@
             <a class="link" href="coming-soon.html"> Contact </a>
           </nav>
 
+          <!-- ***** Création du Menu burger responsive ***** -->
           <a
             id="topnav_hamburger_icon"
             href="javascript:void(0);"
             onclick="showResponsiveMenu()"
           >
-            <!-- Some spans to act as a hamburger -->
             <span></span>
             <span></span>
             <span></span>
           </a>
 
-          <!-- Responsive Menu -->
+          <!-- ***** Menu responsive ***** -->
           <nav role="navigation" id="topnav_responsive_menu">
             <ul>
               <li><a class="link" href="coming-soon.html"> Agency </a></li>
@@ -68,9 +68,9 @@
       </div>
     </header>
 
-    <!-- ========================= BODY ========================= -->
+    <!-- ********** PAGE ********** -->
     <div class="wrapper">
-      <!-- ==================== CONTACT-US ==================== -->
+      <!-- ********** CONTACT-US ********** -->
       <div class="contact-us">
         <h2>How to contact us</h2>
         <p>
@@ -85,7 +85,7 @@
         </div>
       </div>
 
-      <!-- ==================== SLIDER ==================== -->
+      <!-- ********** SLIDER ********** -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -115,7 +115,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
-      <!-- ==================== FIND-US ==================== -->
+      <!-- ********** FIND-US ********** -->
       <div class="find-us">
         <h2>How to find us</h2>
         <p>
@@ -127,7 +127,7 @@
         <h2 id="adress">33 avenue de l'aquitaine<br />64100 bayonne</h2>
       </div>
 
-      <!-- ==================== MAP ==================== -->
+      <!-- ********** MAP ********** -->
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.7620405707567!2d-1.4676363846144282!3d43.48643617121646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd514096fe2206e7%3A0xa570f3229d72bcde!2s33%20Av.%20de%20l&#39;Aquitaine%2C%2064100%20Bayonne!5e0!3m2!1sfr!2sfr!4v1645273599264!5m2!1sfr!2sfr"
@@ -139,7 +139,7 @@
         ></iframe>
       </div>
 
-      <!-- ==================== FORM ==================== -->
+      <!-- ********** FORM ********** -->
       <div class="form">
         <h2>Drop us a line</h2>
         <p>
@@ -149,13 +149,13 @@
           cupiditate debitis!
         </p>
 
-        <!-- ===== pays ===== -->
+        <!-- ***** Pays ***** -->
         <div class="form-line">
           <label class="form-label">Choose your country *</label>
           <select id="country-select"></select>
         </div>
 
-        <!-- ===== nom ===== -->
+        <!-- ***** Nom ***** -->
         <div class="form-line">
           <label class="form-label">Name *</label>
           <input
@@ -167,7 +167,7 @@
           />
         </div>
 
-        <!-- ===== adresse mail ===== -->
+        <!-- ***** Adresse email ***** -->
         <div class="form-line">
           <label class="form-label">Mail address *</label>
           <input
@@ -179,7 +179,7 @@
           />
         </div>
 
-        <!-- ===== message ===== -->
+        <!-- ***** Message ***** -->
         <div class="form-line">
           <label class="form-label">Message *</label>
           <textarea
@@ -190,7 +190,7 @@
           ></textarea>
         </div>
 
-        <!-- ===== bouton ===== -->
+        <!-- ***** Bouton ***** -->
         <div>
           <button id="form-button" type="button">
             <h3>SEND</h3>
@@ -199,9 +199,9 @@
       </div>
     </div>
 
-    <!-- ========================= SCRIPTS JAVASCRIPT ========================= -->
+    <!-- ********** SCRIPTS JAVASCRIPT ********** -->
 
-    <!-- ==================== RESPONSIVE MENU : affichage du menu reponsive ==================== -->
+    <!-- ***** RESPONSIVE MENU : affichage du menu reponsive ***** -->
     <script>
       function showResponsiveMenu() {
         var menu = document.getElementById("topnav_responsive_menu");
@@ -219,7 +219,7 @@
       }
     </script>
 
-    <!-- ==================== SWIPER : affichage du slider ==================== -->
+    <!-- ***** SWIPER : affichage du slider ***** -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
@@ -236,7 +236,7 @@
       });
     </script>
 
-    <!-- ==================== FANCYBOX : zoom photos slider ==================== -->
+    <!-- ***** FANCYBOX : zoom photos slider ***** -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script>
       Fancybox.bind(".swiper-photo", {
@@ -252,14 +252,14 @@
       });
     </script>
 
-    <!-- ==================== AXIOS : appel API liste de pays ==================== -->
+    <!-- ***** AXIOS : appel API liste de pays ***** -->
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="../js/formCountries.js"></script>
 
-    <!-- ==================== BONUS : SWEET ALERT : alerte plus jolie ==================== -->
+    <!-- ***** BONUS : SWEET ALERT : alerte plus jolie ***** -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <!-- ==================== TIPPY : notifications des champs vides du formulaire ==================== -->
+    <!-- ***** TIPPY : notifications des champs vides du formulaire ***** -->
     <script defer src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer src="https://unpkg.com/tippy.js@6"></script>
     <script defer src="../js/formValidation.js"></script>

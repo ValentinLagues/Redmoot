@@ -1,4 +1,4 @@
-// ========== APPEL API POUR AFFICHER LA LISTE DES PAYS ==========
+// ********** APPEL API POUR AFFICHER LA LISTE DES PAYS **********
 
 // je fais l'appel API avec Axios
 const getCountries = async () => {
