@@ -2,7 +2,7 @@
 
 // Je définie les variables avec un getElementById pour récupérer la value des input
 const sendButton = document.getElementById("form-button");
-// const formCountry = document.getElementById("form-country");
+const formCountry = document.getElementById("country-select");
 const formName = document.getElementById("form-name");
 const formAddress = document.getElementById("form-address");
 const formMessage = document.getElementById("form-message");
@@ -32,8 +32,8 @@ sendButton.addEventListener("click", (event) => {
     swal("Thank you", "Your message had been successfully sent", "success");
     const result = [];
     result.push({
-      // country: formCountry.value,
-      // country: document.getElementById("form-country").value,
+      country: formCountry.value,
+      // country: document.getElementById("country-select").value,
       name: formName.value,
       address: formAddress.value,
       message: formMessage.value,

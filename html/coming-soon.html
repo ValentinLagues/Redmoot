@@ -11,12 +11,14 @@
   <body>
     <!-- ========================= HEADER ========================= -->
     <header>
-      <nav>
-        <!-- ==================== MENU ==================== -->
-        <div class="header">
-          <label class="menu-burger" for="toggle">☰</label>
-          <input type="checkbox" id="toggle" />
-          <div class="menu">
+      <div id="root">
+        <div id="menu" class="menu">
+          <a id="home_link" class="topnav_link" href="index.html">
+            <img id="home-logo" src="../assets/logos/logo.svg" alt="logo" />
+          </a>
+
+          <!-- Classic Menu -->
+          <nav role="navigation" id="topnav_menu">
             <a class="link" href="coming-soon.html"> Agency </a>
             <a class="link" href="coming-soon.html"> Who are we ? </a>
             <a class="link" href="coming-soon.html"> Work </a>
@@ -25,13 +27,57 @@
             </a>
             <a class="link" href="coming-soon.html"> Team </a>
             <a class="link" href="coming-soon.html"> Localisation </a>
-            <a id="contact-link" href="coming-soon.html"> Contact </a>
-          </div>
+            <a class="link" href="coming-soon.html"> Contact </a>
+          </nav>
+
+          <a
+            id="topnav_hamburger_icon"
+            href="javascript:void(0);"
+            onclick="showResponsiveMenu()"
+          >
+            <!-- Some spans to act as a hamburger -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <!-- Responsive Menu -->
+          <nav role="navigation" id="topnav_responsive_menu">
+            <ul>
+              <li><a class="link" href="coming-soon.html"> Agency </a></li>
+              <li>
+                <a class="link" href="coming-soon.html"> Who are we ? </a>
+              </li>
+              <li><a class="link" href="coming-soon.html"> Work </a></li>
+              <li><a class="link" href="coming-soon.html"> Team </a></li>
+              <li>
+                <a class="link" href="coming-soon.html"> Localisation </a>
+              </li>
+              <li><a class="link" href="coming-soon.html"> Contact </a></li>
+            </ul>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
     <div class="coming-soon">
       <h1>Coming soon</h1>
     </div>
+
+    <script>
+      function showResponsiveMenu() {
+        var menu = document.getElementById("topnav_responsive_menu");
+        var icon = document.getElementById("topnav_hamburger_icon");
+        var root = document.getElementById("root");
+        if (menu.className === "") {
+          menu.className = "open";
+          icon.className = "open";
+          root.style.overflowY = "hidden";
+        } else {
+          menu.className = "";
+          icon.className = "";
+          root.style.overflowY = "";
+        }
+      }
+    </script>
   </body>
 </html>
