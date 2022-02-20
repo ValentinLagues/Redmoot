@@ -51,7 +51,8 @@ body {
     flex-direction: row;
     justify-content: center;
   }
-  #phone {
+  #phone-icon {
+    padding: 0.8vh 0 0;
     width: 3vw;
     height: 3vh;
   }
@@ -169,12 +170,29 @@ body {
     background: transparent;
     padding: 2vh 1vw;
   }
-  
 
-/* ===== RESPONSIVE ===== */
-  @media screen and (max-width: 400px) {
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-    }
+  /* ===== RESPONSIVE ===== */
+@media screen and (max-width: 400px) {
+
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
   }
+
+  /* SECTION HOW TO CONTACT US */
+  .contact-us {
+    width: auto;
+  }
+
+  #phone-icon {
+    padding: 0 3vw 1.5vh 0;
+    width: 5vw;
+    height: 5vh;
+  }
+
+  .find-us {
+    padding: 10vh 6vw;
+  }
+}
