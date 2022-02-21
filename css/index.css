@@ -13,6 +13,7 @@
 body {
     background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     width: auto;
+    overflow-y: scroll;
 }
 
 /* ***** WRAPPER ***** */
