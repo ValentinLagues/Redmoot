@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
     />
-    <link rel="stylesheet" href="../css/responsive.css" />
+
     <title>Test Redmoot</title>
   </head>
   <body>
@@ -21,12 +21,16 @@
     <header>
       <div id="root">
         <div class="menu">
-          <a id="home_link" class="topnav_link" href="index.html">
-            <img id="home-logo" src="../assets/logos/logo.svg" alt="logo" />
+          <a id="responsive-home-link" href="index.html">
+            <img
+              id="responsive-home-logo"
+              src="../assets/logos/logo.svg"
+              alt="logo"
+            />
           </a>
 
           <!-- ***** Menu desktop ***** -->
-          <nav role="navigation" id="topnav_menu">
+          <nav role="navigation" id="desktop-menu">
             <a class="link" href="coming-soon.html"> Agency </a>
             <a class="link" href="coming-soon.html"> Who are we ? </a>
             <a class="link" href="coming-soon.html"> Work </a>
@@ -40,7 +44,7 @@
 
           <!-- ***** Création du Menu burger responsive ***** -->
           <a
-            id="topnav_hamburger_icon"
+            id="hamburger-menu-icon"
             href="javascript:void(0);"
             onclick="showResponsiveMenu()"
           >
@@ -50,7 +54,7 @@
           </a>
 
           <!-- ***** Menu responsive ***** -->
-          <nav role="navigation" id="topnav_responsive_menu">
+          <nav role="navigation" id="responsive-menu">
             <ul>
               <li><a class="link" href="coming-soon.html"> Agency </a></li>
               <li>
@@ -204,9 +208,9 @@
     <!-- ***** RESPONSIVE MENU : affichage du menu reponsive ***** -->
     <script>
       function showResponsiveMenu() {
-        var menu = document.getElementById("topnav_responsive_menu");
-        var icon = document.getElementById("topnav_hamburger_icon");
-        var root = document.getElementById("root");
+        const menu = document.getElementById("responsive-menu");
+        const icon = document.getElementById("hamburger-menu-icon");
+        const root = document.getElementById("root");
         if (menu.className === "") {
           menu.className = "open";
           icon.className = "open";

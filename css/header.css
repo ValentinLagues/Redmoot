@@ -10,14 +10,14 @@ header {
     background-image: url("../assets/background/texture.png");
 }
  
-/* ***** MENU ***** */
+/* ***** MENU DESKTOP ***** */
 .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#topnav_menu {
+#desktop-menu {
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -50,9 +50,9 @@ header {
 }
   
 /* cache le menu burger et le logo sur l'interface desktop */
-  #topnav_hamburger_icon,
-  #topnav_responsive_menu,
-  #home-link {
+  #hamburger-menu-icon,
+  #responsive-menu,
+  #responsive-home-link {
     display: none;
   }
   
@@ -66,21 +66,24 @@ header {
       overflow-x: hidden;
     }
 
-    #topnav_menu {
+    #desktop-menu {
       display: none;
     }
   
   /* logo à gauche et menu burger à droite */
-    #home-logo {
-      display: block;
+    #responsive-home-link {
+      display:block;
       position: relative;
-      margin: 0 20px 50px;
+      margin: 0 10px 50px;
+    }
+    
+    #responsive-home-logo {
       width: 15vw;
       height: 15vh;
     }
   
   /* affiche le menu responsive et le positionne à droite */
-    #topnav_responsive_menu {
+    #responsive-menu {
       display: block;
       position: absolute;
       margin: 0;
@@ -97,7 +100,7 @@ header {
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
   
-    #topnav_responsive_menu ul {
+    #responsive-menu ul {
       display: flex;
       flex-direction: column;
   
@@ -117,25 +120,25 @@ header {
       -webkit-font-smoothing: antialiased;
     }
   
-    #topnav_responsive_menu li {
+    #responsive-menu li {
       padding: 12px 24px;
     }
   
-    #topnav_responsive_menu a {
+    #responsive-menu a {
       white-space: nowrap;
       color: black;
       font-size: 2vh;
       text-decoration: none;
     }
   
-    #topnav_responsive_menu.open {
+    #responsive-menu.open {
       transform: none;
       position: fixed;
     }
   
   /* ***** HAMBURGER ICON ***** */
   /* position et taille du menu burger */
-    #topnav_hamburger_icon {
+    #hamburger-menu-icon {
       display: block;
       position: relative;
       margin: 10px 25px 35px;
@@ -150,7 +153,7 @@ header {
     }
   
   /* style des span qui forment les traits du menu burger */
-    #topnav_hamburger_icon span {
+    #hamburger-menu-icon span {
       display: block;
       position: absolute;
       height: 4px;
@@ -176,21 +179,23 @@ header {
     }
   
   /* position des trois traits pour former le menu burger */
-    #topnav_hamburger_icon span:nth-child(1) {
+    #hamburger-menu-icon span:nth-child(1) {
       top: 0px;
       -webkit-transform-origin: left top;
       -moz-transform-origin: left top;
       -o-transform-origin: left top;
       transform-origin: left top;
     }
-    #topnav_hamburger_icon span:nth-child(2) {
+
+    #hamburger-menu-icon span:nth-child(2) {
       top: 12px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
       transform-origin: left center;
     }
-    #topnav_hamburger_icon span:nth-child(3) {
+
+    #hamburger-menu-icon span:nth-child(3) {
       top: 24px;
       -webkit-transform-origin: left bottom;
       -moz-transform-origin: left bottom;
@@ -199,12 +204,12 @@ header {
     }
   
   /* change la couleur du menu burger */
-    #topnav_hamburger_icon.open span {
+    #hamburger-menu-icon.open span {
         background:-webkit-linear-gradient(left, #ed1e79, #6d0063);
     }
   
   /* le premier span tourne à 45° pour former la croix */
-    #topnav_hamburger_icon.open span:nth-child(1) {
+    #hamburger-menu-icon.open span:nth-child(1) {
       width: 110%;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -213,13 +218,13 @@ header {
     }
   
     /* le second span disparait */
-    #topnav_hamburger_icon.open span:nth-child(2) {
+    #hamburger-menu-icon.open span:nth-child(2) {
       width: 0%;
       opacity: 0;
     }
   
   /* le troisieme span tourne à -45° pour former la croix */
-    #topnav_hamburger_icon.open span:nth-child(3) {
+    #hamburger-menu-icon.open span:nth-child(3) {
       width: 110%;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
